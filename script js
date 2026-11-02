@@ -1,0 +1,67 @@
+/* Princess Fashion Store — Part 3 functionality. */
+(() => {
+  'use strict';
+  const toast = (message) => { const el = document.getElementById('site-toast'); if (!el) return; el.textContent = message; el.classList.add('is-visible'); window.setTimeout(() => el.classList.remove('is-visible'), 3500); };
+
+  // Search and sort the category cards on the home page.
+  const grid = document.getElementById('clothing-grid');
+  const search = document.getElementById('category-search');
+  const sort = document.getElementById('category-sort');
+  if (grid && search && sort) {
+    const cards = Array.from(grid.querySelectorAll('.clothing-card'));
+    const applyFilters = () => {
+      const term = search.value.trim().toLowerCase();
+      const sorted = [...cards].sort((a, b) => {
+        const an = a.innerText.toLowerCase(), bn = b.innerText.toLowerCase();
+        return sort.value === 'az' ? an.localeCompare(bn) : sort.value === 'za' ? bn.localeCompare(an) : cards.indexOf(a) - cards.indexOf(b);
+      });
+      sorted.forEach(card => { const match = card.innerText.toLowerCase().includes(term); card.hidden = !match; grid.appendChild(card); });
+      const status = document.getElementById('search-status');
+      if (status) status.textContent = `${sorted.filter(c => !c.hidden).length} categor${sorted.filter(c => !c.hidden).length === 1 ? 'y' : 'ies'} shown.`;
+    };
+    search.addEventListener('input', applyFilters); sort.addEventListener('change', applyFilters);
+    cards.forEach(card => { card.tabIndex = 0; card.setAttribute('role', 'button'); card.setAttribute('aria-label', `View details about ${card.querySelector('h3')?.textContent || 'clothing category'}`); const show = () => toast(card.innerText.replace(/\s+/g, ' ').trim()); card.addEventListener('click', show); card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(); } }); });
+    applyFilters();
+  }
+
+  // Client-side validation with field-level messages. Forms use mailto as a static-site fallback.
+  document.querySelectorAll('.validated-form').forEach(form => {
+    const feedback = form.querySelector('.form-feedback');
+    const validate = (field) => {
+      const error = field.parentElement.querySelector('.field-error');
+      let message = '';
+      if (field.required && !field.value.trim()) message = 'This field is required.';
+      else if (field.type === 'email' && field.value && !field.validity.valid) message = 'Enter a valid email address.';
+      else if (field.type === 'tel' && field.value && !field.validity.valid) message = 'Enter a valid phone number (7–20 characters).';
+      else if (field.minLength > 0 && field.value && field.value.trim().length < field.minLength) message = `Please enter at least ${field.minLength} characters.`;
+      else if (field.maxLength > 0 && field.value.length > field.maxLength) message = `Please use no more than ${field.maxLength} characters.`;
+      else if (field.type === 'number' && field.value && !field.validity.valid) message = 'Enter a quantity within the permitted range.';
+      if (error) error.textContent = message;
+      field.setAttribute('aria-invalid', message ? 'true' : 'false');
+      return !message;
+    };
+    form.querySelectorAll('input, textarea, select').forEach(field => { field.addEventListener('blur', () => validate(field)); field.addEventListener('input', () => { if (field.getAttribute('aria-invalid') === 'true') validate(field); }); field.addEventListener('change', () => validate(field)); });
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      const fields = Array.from(form.querySelectorAll('input, textarea, select')).filter(f => !f.disabled);
+      const valid = fields.map(validate).every(Boolean) && form.checkValidity();
+      if (!valid) { if (feedback) feedback.textContent = 'Please correct the highlighted fields before continuing.'; form.querySelector('[aria-invalid="true"]')?.focus(); return; }
+      const data = Object.fromEntries(new FormData(form).entries());
+      if (form.dataset.formType === 'enquiry') {
+        const result = document.getElementById('enquiry-result');
+        if (result) { result.hidden = false; result.innerHTML = `<h2>Enquiry summary</h2><p><strong>Topic:</strong> ${escapeHtml(data.enquiryType)}</p><p><strong>Size:</strong> ${escapeHtml(data.size || 'Not specified')}</p><p><strong>Quantity:</strong> ${escapeHtml(data.quantity || 'Not specified')}</p><p>We cannot verify live stock or pricing on this website. Please send the email to request confirmation from the store.</p>`; }
+      }
+      const subject = form.dataset.formType === 'enquiry' ? `Product / service enquiry: ${data.enquiryType}` : `Website message: ${data.messageType}`;
+      const body = Object.entries(data).map(([key, value]) => `${key}: ${value}`).join('\n');
+      if (feedback) feedback.textContent = 'Your details passed validation. Your email application should open; review the message and press Send to submit it.';
+      window.location.href = `mailto:info@princessfashionstore.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+  });
+  function escapeHtml(value) { return String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch])); }
+
+  // Gentle reveal animation; reduced-motion preferences are respected in CSS.
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-revealed'); observer.unobserve(entry.target); } }), { threshold: 0.12 });
+    document.querySelectorAll('.content-section, .contact-section, .social-section').forEach(section => { section.classList.add('reveal-on-scroll'); observer.observe(section); });
+  }
+})();
