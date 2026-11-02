@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Princess Fashion Store offers fashionable clothing including casual wear, formal wear, sportswear and accessories at affordable prices.">
+
+    <meta name="keywords"
+          content="Princess Fashion Store, clothing, fashion, casual wear, formal wear, sportswear, accessories, Polokwane">
+
+    <meta name="author" content="Princess Fashion Store">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Princess Fashion Store | Fashion for Everyone">
+    <meta property="og:description" content="Discover casual wear, formal wear, sportswear and accessories at Princess Fashion Store in Polokwane.">
+    <meta property="og:type" content="website">
+
+    <title>Princess Fashion Store | Fashion for Everyone</title>
+
+    <!-- External CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Accessibility: Skip navigation link -->
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <div class="brand">
+
+                <div class="brand-logo">
+                    P
+                </div>
+
+                <div>
+                    <h1>Princess Fashion Store</h1>
+                    <p>Your One-Stop Shop for All Things Fashion</p>
+                </div>
+
+            </div>
+
+
+            <!-- ================= NAVIGATION ================= -->
+
+            <nav class="main-navigation"
+                 aria-label="Main navigation">
+
+                <ul>
+
+                    <li>
+                        <a href="index.html#about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="#mission">Mission</a>
+                    </li>
+
+                    <li>
+                        <a href="#vision">Vision</a>
+                    </li>
+
+                    <li>
+                        <a href="#values">Values</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#clothing">Clothing</a>
+                    </li>
+
+                    <li><a href="enquiry.html">Enquiries</a></li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                STYLE • QUALITY • AFFORDABILITY
+            </p>
+
+            <h2>
+                Fashion That Fits
+                <span>Your Style</span>
+            </h2>
+
+            <p>
+                Discover fashionable clothing for every occasion,
+                from everyday casual wear to elegant formal styles.
+            </p>
+
+            <a class="hero-button" href="#clothing">
+                Explore Our Clothing
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main id="main-content">
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section class="content-section"
+                 id="about">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    WHO WE ARE
+                </p>
+
+                <h2>About Us</h2>
+
+            </div>
+
+            <div class="about-content">
+
+                <div class="about-text">
+
+                    <p>
+                        Princess Fashion Store is a local clothing store
+                        that sells all kinds of fashionable clothes, from
+                        old fashioned to modern day trends.
+                    </p>
+
+                    <p>
+                        Our goal is to follow all new trends and be able
+                        to accommodate each and everyone's style of dressing.
+                    </p>
+
+                </div>
+
+                <div class="about-highlight">
+
+                    <strong>Fashion for Everyone</strong>
+
+                    <p>
+                        We believe everyone should be able to express
+                        themselves through their personal style.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MISSION ================= -->
+
+        <section class="content-section section-light"
+                 id="mission">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    WHAT WE DO
+                </p>
+
+                <h2>Our Mission</h2>
+
+            </div>
+
+            <p class="section-description">
+                Our mission is to provide our customers with the best
+                quality clothes at affordable prices.
+            </p>
+
+        </section>
+
+
+        <!-- ================= VISION ================= -->
+
+        <section class="content-section"
+                 id="vision">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    WHERE WE ARE GOING
+                </p>
+
+                <h2>Our Vision</h2>
+
+            </div>
+
+            <p class="section-description">
+                Our vision is to be the leading clothing store in the
+                area, known for our exceptional customer service and
+                wide selection of fashionable clothing.
+            </p>
+
+        </section>
+
+
+        <!-- ================= VALUES ================= -->
+
+        <section class="content-section section-light"
+                 id="values">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    WHAT MATTERS TO US
+                </p>
+
+                <h2>Our Values</h2>
+
+            </div>
+
+
+            <div class="values-grid">
+
+                <article class="value-card">
+
+                    <div class="value-icon">
+                        01
+                    </div>
+
+                    <h3>Integrity</h3>
+
+                    <p>
+                        We believe in honest and respectful relationships
+                        with our customers.
+                    </p>
+
+                </article>
+
+
+                <article class="value-card">
+
+                    <div class="value-icon">
+                        02
+                    </div>
+
+                    <h3>Customer Satisfaction</h3>
+
+                    <p>
+                        Our customers are at the centre of everything
+                        we do.
+                    </p>
+
+                </article>
+
+
+                <article class="value-card">
+
+                    <div class="value-icon">
+                        03
+                    </div>
+
+                    <h3>Quality</h3>
+
+                    <p>
+                        We are committed to providing fashionable
+                        clothing that meets our quality standards.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CLOTHING ================= -->
+
+        <section class="content-section"
+                 id="clothing">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    SHOP OUR COLLECTION
+                </p>
+
+                <h2>Types of Clothing</h2>
+
+                <p class="section-description">
+                    We sell a variety of clothing and fashion products
+                    for different occasions and styles.
+                </p>
+
+            </div>
+
+
+            <div class="product-tools" role="search" aria-label="Filter clothing categories">
+                <label for="category-search">Search categories</label>
+                <input type="search" id="category-search" placeholder="Try casual, formal, sportswear…" aria-label="Search clothing categories">
+                <label for="category-sort">Sort</label>
+                <select id="category-sort" aria-label="Sort categories"><option value="default">Featured order</option><option value="az">Name A–Z</option><option value="za">Name Z–A</option></select>
+                <p id="search-status" aria-live="polite"></p>
+            </div>
+            <div class="clothing-grid" id="clothing-grid">
+
+
+                <article class="clothing-card">
+
+                    <div class="clothing-number">
+                        01
+                    </div>
+
+                    <h3>Casual Wear</h3>
+
+                    <p>
+                        Comfortable and stylish clothing for everyday
+                        activities and relaxed occasions.
+                    </p>
+
+                </article>
+
+
+                <article class="clothing-card">
+
+                    <div class="clothing-number">
+                        02
+                    </div>
+
+                    <h3>Formal Wear</h3>
+
+                    <p>
+                        Elegant clothing suitable for professional
+                        environments and special occasions.
+                    </p>
+
+                </article>
+
+
+                <article class="clothing-card">
+
+                    <div class="clothing-number">
+                        03
+                    </div>
+
+                    <h3>Sportswear</h3>
+
+                    <p>
+                        Practical and comfortable clothing designed
+                        for active lifestyles.
+                    </p>
+
+                </article>
+
+
+                <article class="clothing-card">
+
+                    <div class="clothing-number">
+                        04
+                    </div>
+
+                    <h3>Accessories</h3>
+
+                    <p>
+                        Fashion accessories that help complete and
+                        personalise your outfit.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section class="contact-section"
+                 id="contact">
+
+            <div class="contact-container">
+
+
+                <div class="contact-information">
+
+                    <p class="section-label">
+                        GET IN TOUCH
+                    </p>
+
+                    <h2>Contact Us</h2>
+
+                    <p>
+                        For any inquiries, please contact us using
+                        the information below.
+                    </p>
+
+
+                    <div class="contact-item">
+
+                        <strong>Email</strong>
+
+                        <a href="mailto:info@princessfashionstore.com">
+                            info@princessfashionstore.com
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>Phone</strong>
+
+                        <a href="tel:+27685150471">
+                            (+27) 68 515 0471
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>Address</strong>
+
+                        <address>
+                            192 Suid Street,<br>
+                            Polokwane
+                        </address>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-form">
+                    <h3>How can we help?</h3>
+                    <p>For product availability, pricing or partnership enquiries, use our enquiry form. For general messages, use the contact form.</p>
+                    <p><a class="hero-button" href="enquiry.html">Make an Enquiry</a></p>
+                    <p><a href="contact.html">Send a General Message</a></p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ================= SOCIAL MEDIA ================= -->
+
+        <section class="social-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    STAY CONNECTED
+                </p>
+
+                <h2>Follow Us</h2>
+
+                <p class="section-description">
+                    Follow us on social media for the latest updates
+                    and promotions!
+                </p>
+
+            </div>
+
+
+            <div class="social-links">
+
+                <a
+                    href="https://www.facebook.com/princessfashionstore"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Princess Fashion Store on Facebook">
+
+                    Facebook
+
+                </a>
+
+
+                <a
+                    href="https://www.instagram.com/princessfashionstore"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Princess Fashion Store on Instagram">
+
+                    Instagram
+
+                </a>
+
+
+                <a
+                    href="https://www.twitter.com/princessfashionstore"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Princess Fashion Store on Twitter">
+
+                    Twitter
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <div>
+
+                <h2>
+                    Princess Fashion Store
+                </h2>
+
+                <p>
+                    Your One-Stop Shop for All Things Fashion!
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html#about">About</a>
+
+                <a href="index.html#clothing">Clothing</a>
+
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                &copy; 2026 Princess Fashion Store.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+<div class="toast" id="site-toast" role="status" aria-live="polite"></div>
+</body>
+
+</html>
